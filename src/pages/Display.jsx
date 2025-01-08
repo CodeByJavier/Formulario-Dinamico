@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Controls from './ControlsDisplay'
-import TableCell, {TableHeader} from "./DisplayData";
-import Filter from "./FilterDisplay";
+import Controls from '../components/ControlsDisplay'
+import TableCell, {TableHeader} from "../components/DisplayData";
+import Filter from "../components/FilterDisplay";
 
 export default function Display({ data }) {
     const [currentPage, setCurrentPage] = useState(1);
