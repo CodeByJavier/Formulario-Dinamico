@@ -1,7 +1,7 @@
 import './InputForm'
 import profile from '../assets/profile.png' 
 import React, { useState } from 'react';
-import ValidationInput, {FormatName} from './Validation';
+import ValidationInput, {FormatName} from '../components/Validation';
 
 export default function Input({ onAddData }){
 

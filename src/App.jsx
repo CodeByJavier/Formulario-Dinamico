@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/NavBar";
-import Input from "./components/InputForm";
-import Display from "./components/Display";
+import Input from "./pages/InputForm";
+import Display from "./pages/Display";
 import { useState } from "react";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/formulario-dinamico">
       <Nav />
       <Routes>
         <Route path="/" element={<Input onAddData={addData} />} />
