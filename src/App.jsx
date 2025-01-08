@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/NavBar";
 import Input from "./pages/InputForm";
 import Display from "./pages/Display";
@@ -39,13 +39,13 @@ function App() {
   };
 
   return (
-    <Router basename="/formulario-dinamico">
+    <HashRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={<Input onAddData={addData} />} />
+        <Route path="/*" element={<Input onAddData={addData} />} />
         <Route path="/dashboard/*" element={<Display data={data} onAddData={addData}/>} />  
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
