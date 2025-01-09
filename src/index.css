@@ -79,18 +79,19 @@ button:focus-visible {
 
 .nav-bar h3{
   color: #61DBFB;
-  margin-left: 1.5em;
+  margin: auto 1.5em;
   font-size: 1.2em;
   font-weight: 500;
 }
 
 .nav-bar ul{
   display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
 .nav-bar ul li{
   list-style-type: none;
-  margin-right: 2em;
 }
 
 .nav-bar li a{
@@ -98,12 +99,12 @@ button:focus-visible {
   text-decoration: none;
   font-weight: 500;
   font-weight: 500;
-  margin-right: 2em;
+  margin: 2em;
   transition: all 0.35s ease-in-out;
 }
 
 .nav-bar .logo{
-  margin-right: 1.5em;
+  margin:auto 1.5em;
 }
 
 .nav-bar a:hover{
@@ -115,15 +116,23 @@ button:focus-visible {
 
 @media (max-width: 510px) {
 
+  .nav-bar h3{
+    margin: auto 10px;
+  }
+  .nav-bar .logo{
+    margin: auto 10px;
+  }
+
   .nav-bar ul{
-    padding-left: 20px;
+    justify-content: center;
+    padding: 0;
   }
 
   .nav-bar ul li{
     margin-right: 0;
   }
   .nav-bar ul li a{
-    margin-right: 1.4em;
+    margin: 10px;
   }
 }
 
@@ -224,6 +233,9 @@ input:focus::placeholder {
 
 /* FORM STYLE RESPONSIVE */
 @media (max-width: 868px) {
+  .form{
+    margin: auto 20px;
+  }
   .container-form .profile-img{
     display: none;
   }
@@ -266,8 +278,6 @@ input:focus::placeholder {
   border-bottom: 1px solid #001f27;
   outline: none;
 }
-
-
 
 .table-container{
   display: grid;
@@ -408,7 +418,7 @@ input:focus::placeholder {
 @media (max-width: 850px) {
   
   .table-container{
-    width: 75%;
+    width: 80%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0;

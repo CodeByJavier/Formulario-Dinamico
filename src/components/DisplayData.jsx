@@ -18,7 +18,7 @@ export default function TableCell({data, setData, currentData}){
     const [editData, setEditData] = useState(null);
 
     if (!Array.isArray(data)) {
-        return <div>No hay datos disponibles</div>;  // Si no hay datos, muestra este mensaje
+        return <div>No hay datos disponibles</div>;  
     }
 
     const handleDelete = (id) => {
@@ -30,17 +30,14 @@ export default function TableCell({data, setData, currentData}){
     const handleEdit = (row) => {setEditData(row);};
 
     const addData = (newData) => {
-        // Filtramos para excluir al usuario que estamos editando
         const otherData = data.filter((item) => item.id !== newData.id);
     
-        // Validamos que no haya conflictos con correo o teléfono
         if (otherData.some(item => item.mail === newData.mail || item.phone === newData.phone)) {
             alert("Ese mail o número ya existe");
         } else {
-            // Insertamos el nuevo dato y ordenamos por `id`
             const updatedData = [...otherData, newData].sort((a, b) => a.id - b.id);
             setData(updatedData);
-            setEditData(null); // Cerramos el formulario de edición
+            setEditData(null);
         }
     };
     

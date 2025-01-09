@@ -30,7 +30,7 @@ export default function Input({ onAddData }){
         e.preventDefault();
 
         // Llamada a la función de validación
-        const resultado = ValidationInput(dataForm.names, dataForm.mail, dataForm.phone, dataForm.id);
+        const resultado = ValidationInput(dataForm.names.trim(), dataForm.mail.trim(), dataForm.phone.trim(), dataForm.id.trim());
 
         if (resultado.names || resultado.mail || resultado.phone || resultado.id) {
             setErrores(resultado); // Actualiza el estado de errores

@@ -29,14 +29,14 @@ function App() {
     { id: 120, names: 'Sergio Ibáñez', mail: 'sergio@mail.com', phone: '987321654' },
   ]);
 
-
   const addData = (newData) => {
     if(data.some(item => item.id === newData.id || item.mail === newData.mail || item.phone === newData.phone)){
       alert("Ese id, mail o numero ya existe");
     } else {
-      setData(prevData => [...prevData, newData]);
+        const updatedData = [...data, newData].sort((a, b) => a.id - b.id);
+        setData(updatedData);
     }
-  };
+};
 
   return (
     <HashRouter>

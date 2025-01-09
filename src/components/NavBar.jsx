@@ -11,9 +11,8 @@ export default function Nav() {
         <li><Link to="/dashboard">Dashboard</Link></li>
       </ul>
       <div className='logo'>
-        <img src={reactLogo} className="react" alt="React logo" />
+        <img src={reactLogo} className="react" alt="React" />
       </div>
-
     </div>
   );
 }

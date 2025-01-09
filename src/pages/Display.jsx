@@ -14,7 +14,7 @@ export default function Display({ data }) {
 
     useEffect(() => {
         if (filteredData.length < (currentPage - 1) * itemsPerPage) {
-            setCurrentPage(1); // Si la página actual está fuera de rango, la restablecemos a la primera
+            setCurrentPage(1); 
         }
     }, [filteredData, currentPage, itemsPerPage]);
     

@@ -4,19 +4,18 @@ import { faAngleLeft, faAngleRight, faAngleDoubleLeft, faAngleDoubleRight } from
 export default function Controls({ dataLength, itemsPerPage, currentPage, setCurrentPage, setItemsPerPage }) {
     const totalPages = Math.ceil(dataLength / itemsPerPage);
 
-    // Función para actualizar la página al cambiar el número de elementos por página
+    
     const handleSelect = (event) => {
         setItemsPerPage(parseInt(event.target.value, 10));
-        setCurrentPage(1);  // Resetea a la primera página al cambiar los items por página
+        setCurrentPage(1);  
     };
 
-    // Botones de paginación
+
     const handleClickStart = () => setCurrentPage(1);
     const handleClickNext = () => { if (currentPage < totalPages) setCurrentPage(currentPage + 1); };
     const handleClickPrev = () => { if (currentPage > 1) setCurrentPage(currentPage - 1); };
     const handleClickEnd = () => setCurrentPage(totalPages);
 
-    // Verificar si estamos en la primera o última página
     const isFirstPage = currentPage === 1;
     const isLastPage = currentPage === totalPages;
 
